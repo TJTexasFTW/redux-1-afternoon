@@ -57,10 +57,10 @@ function reducer ( state = initialState, action ) {
                 instructions
             };
             const newRecipes = [...state.recipes, recipe];
-            return { ...state, receipes: newRecipes};
+            return { ...state, recipes: newRecipes};
 
         default:
-        return state;
+            return state;
     }
 }
 

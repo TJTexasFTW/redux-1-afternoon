@@ -14,14 +14,16 @@ class Home extends Component {
   }
 
   render() {
+    console.log("whatever");
     const recipes = this.state.recipes.map((recipe, i) => {
+console.log("RECIPE: ", recipe)
       return (
         <RecipeCard
           key={i}
           name={recipe.name}
           category={recipe.category}
-          authorFirst={recipe.authorFirst}
-          authorLast={recipe.authorLast}
+          authorFirst={recipe.authorFName}
+          authorLast={recipe.authorLName}
           ingredients={recipe.ingredients}
           instructions={recipe.instructions}
         />

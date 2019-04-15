@@ -8,8 +8,8 @@ class Author extends Component {
     super(props);
     const reduxState = store.getState();
     this.state = {
-      authorFirst: reduxState.authorFirst,
-      authorLast: reduxState.authorLast
+      authorFirst: reduxState.authorFName,
+      authorLast: reduxState.authorLName
     };
   }
 
