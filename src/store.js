@@ -41,16 +41,16 @@ function reducer ( state = initialState, action ) {
             return {...state, instructions: newInstructions};
         case UPDATE_RECIPES:
             const {
-                name,
-                category,
+                recipeName,
+                recipeCategory,
                 authorFName,
                 authorLName,
                 ingredients,
                 instructions
             } = state;
             const recipe = {
-                name,
-                category,
+                recipeName,
+                recipeCategory,
                 authorFName,
                 authorLName,
                 ingredients,

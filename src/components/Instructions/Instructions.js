@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import store, { UPDATE_INSTRUCTIONS } from "./../../store.js";
+import store, { UPDATE_INSTRUCTIONS, UPDATE_RECIPES } from "./../../store.js";
 
 class Instructions extends Component {
   constructor(props) {
     super(props);
     const reduxState = store.getState();
     this.state = {
-      instructions: [],
+      instructions: reduxState.instructions,
       input: ""
     };
   }
@@ -27,7 +27,9 @@ class Instructions extends Component {
     });
   }
   create() {
-    // Create new recipe in Redux state
+    store.dispatch({
+      type: UPDATE_RECIPES
+    });
   }
   componentDidMount() {
     store.subscribe(() => {
